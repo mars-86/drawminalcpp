@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Drawminal" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Drawminal" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Drawminal" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="drawminal/drawminal.cpp" />
+		<Unit filename="drawminal/drawminal.h" />
+		<Unit filename="gfx/circle.h" />
+		<Unit filename="gfx/color.cpp" />
+		<Unit filename="gfx/color.h" />
+		<Unit filename="gfx/ellipse.h" />
+		<Unit filename="gfx/line.h" />
+		<Unit filename="gfx/parable.h" />
+		<Unit filename="gfx/point2d.h" />
+		<Unit filename="gfx/point3d.h" />
+		<Unit filename="gfx/rect.h" />
+		<Unit filename="gfx/rgb.h" />
+		<Unit filename="gfx/shape.h" />
+		<Unit filename="gfx/shape2d.h" />
+		<Unit filename="gfx/shape3d.h" />
+		<Unit filename="gfx/square.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="os/linux.cpp" />
+		<Unit filename="os/linux.h" />
+		<Unit filename="os/os.h" />
+		<Unit filename="os/platform.h" />
+		<Unit filename="os/types.h" />
+		<Unit filename="os/win32.cpp" />
+		<Unit filename="os/win32.h" />
+		<Unit filename="os/x11.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="os/x11.cpp" />
+		<Unit filename="os/x11.h" />
+		<Unit filename="vterm/command.h" />
+		<Unit filename="vterm/sequences.h" />
+		<Unit filename="vterm/vterm.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
