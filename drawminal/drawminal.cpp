@@ -1,4 +1,4 @@
-#include "graphic.h"
+#include "drawminal.h"
 #include <cmath>
 #include <cstring>
 #define PI 3.14159265
@@ -22,31 +22,30 @@ std::vector<std::string> braille_map = {
     "\u28F0", "\u28F1", "\u28F2", "\u28F3", "\u28F4", "\u28F5", "\u28F6", "\u28F7", "\u28F8", "\u28F9", "\u28FA", "\u28FB", "\u28FC", "\u28FD", "\u28FE", "\u28FF"
 };
 
-namespace ui {
+namespace drawminal {
 
-Graphic::Graphic(short w_ratio, short h_ratio)
+Drawminal::Drawminal(short w_ratio, short h_ratio)
 	: _w_ratio(w_ratio), _h_ratio(h_ratio), _linear_length(_w_ratio * _h_ratio)
 {
     for (int i = 0; i < _linear_length - 1; ++i) _dwable += " ";
 }
 
-Graphic::Graphic(void *context, short w_ratio, short h_ratio)
+Drawminal::Drawminal(void *context, short w_ratio, short h_ratio)
 	: _w_ratio(w_ratio), _h_ratio(h_ratio), _linear_length(_w_ratio * _h_ratio)
 {
     for (int i = 0; i < _linear_length - 1; ++i) _dwable += " ";
 }
 
-Graphic::~Graphic() {}
+Drawminal::~Drawminal() {}
 
-void Graphic::draw(const char *s, int x, int y)
+void Drawminal::draw(const char *s, int x, int y)
 {
     put(s, x, y);
 }
 
-void Graphic::draw(const std::vector<Point2D>& points)
+void Drawminal::draw(const std::vector<Point2D>& points)
 {
-    // _gen_symbol(points);
-    put_buffer(points);
+    for (auto i : points) set_buffer(i.get_x(), i.get_y());
     std::string s;
     for (auto i : get_screen_buffer()) s += (i ? u8"\u283F" : " ");
     std::cout << s << std::flush;
@@ -54,20 +53,18 @@ void Graphic::draw(const std::vector<Point2D>& points)
 }
 
 /*
-void Graphic::draw(const std::vector<Point2D>& points)
+void Drawminal::draw(const std::vector<Point2D>& points)
 {
-    // _gen_symbol(points);
-    put_buffer(points);
+    for (auto i : points) set_buffer(i.get_x(), i.get_y());
     std::string s;
     for (auto i : get_screen_buffer()) s += (i ? u8"\u2550" : " ");
     std::cout << s;
     set_cursor_pos(1, 1);
 }
 
-void Graphic::draw(const std::vector<Point2D>& points)
+void Drawminal::draw(const std::vector<Point2D>& points)
 {
-    // _gen_symbol(points);
-    put_buffer(points);
+    for (auto i : points) set_buffer(i.get_x(), i.get_y());
     std::string shape("");
     // for (auto i : get_screen_buffer()) s += (i ? u8"\u2550" : " ");
     auto sb = get_screen_buffer(points);
@@ -81,7 +78,7 @@ void Graphic::draw(const std::vector<Point2D>& points)
 }
 */
 
-void Graphic::draw(const Shape2D& shape)
+void Drawminal::draw(const Shape2D& shape)
 {
     auto points = shape.get_bounds();
     for (auto i : points) {
@@ -91,16 +88,16 @@ void Graphic::draw(const Shape2D& shape)
     }
 }
 
-void Graphic::erase(const std::vector<Point2D>& points)
+void Drawminal::erase(const std::vector<Point2D>& points)
 {
-    erase_buffer(points);
+    for (auto i : points) unset_buffer(i.get_x(), i.get_y());
     std::string s;
     for (auto i : get_screen_buffer()) s += (i ? "." : " ");
     std::cout << s << std::flush;
     set_cursor_pos(1, 1);
 }
 
-void Graphic::erase(const Shape2D& shape)
+void Drawminal::erase(const Shape2D& shape)
 {
     auto points = shape.get_bounds();
     for (auto i : points) {
@@ -109,7 +106,7 @@ void Graphic::erase(const Shape2D& shape)
     }
 }
 
-void Graphic::print(void)
+void Drawminal::print(void)
 {
     std::string s;
     for (auto i : _buffer)
@@ -118,17 +115,4 @@ void Graphic::print(void)
     set_cursor_pos(1, 1);
 }
 
-const char* Graphic::_gen_symbol(const std::vector<Point2D>& points)
-{
-    // for (int i = 0; i < points.size() - 1; ++i)
-    //    std::cout << atan2(points[i + 1].get_y() - points[i].get_y(), points[i + 1].get_x() - points[i].get_x()) * 180 / PI << std::endl;
-    for (int i = 0; i < points.size() - 1; ++i) {
-        int angle = atan2(points[i + 1].get_y() - points[i].get_y(), points[i + 1].get_x() - points[i].get_x()) * 180 / PI;
-        if (angle == 45) return u8"\u2822";
-
-    }
-
-}
-
-} // namespace ui
-
+} // namespace drawminal

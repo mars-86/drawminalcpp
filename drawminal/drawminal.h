@@ -3,22 +3,16 @@
 #pragma once
 
 #include <vector>
-#include "../gfx/point2d.h"
-#include "../gfx/point3d.h"
-#include "../gfx/line.h"
-#include "../gfx/rect.h"
+#include "../shapes/base/shape2d.h"
+#include "../shapes/coords/point2d.h"
+#include "../shapes/coords/point3d.h"
+#include "../shapes/2d/line.h"
+#include "../shapes/2d/rect.h"
 #include "../vterm/vterm.h"
-#include "region.h"
-#include "container.h"
-#include "ui_component.h"
-#include "euclidean_space.h"
-#include "menubar.h"
-#include "table.h"
-#include "../gfx/shape2d.h"
 
-namespace ui {
+namespace drawminal {
 
-using namespace gfx;
+using namespace shapes;
 using namespace vterm;
 
 constexpr unsigned int pixel_map[4][2] = {
@@ -28,11 +22,11 @@ constexpr unsigned int pixel_map[4][2] = {
     {0x40, 0x80}
 };
 
-class Graphic : public VTerm {
+class Drawminal : public VTerm {
 public:
-	Graphic(short w_ratio, short h_ratio);
-	Graphic(void *context, short w_ratio, short h_ratio);
-	~Graphic();
+	Drawminal(short w_ratio, short h_ratio);
+	Drawminal(void *context, short w_ratio, short h_ratio);
+	~Drawminal();
 
 	void draw(const char *s, int x, int y);
 	void draw(const char *s, int x, int y, int z);
@@ -44,17 +38,11 @@ public:
 	void erase(const std::vector<Point2D>& points);
 	void erase(const std::vector<Point3D>& points);
 	void erase(const Shape2D& shape);
-	const char* _gen_symbol(const std::vector<Point2D>& points);
 	void print(void);
 	void draw_rect(const Rect& rect, const Color& color);
 	void fill_rect(const Rect& rect, const Color& color);
-	void draw_component(const Container& uic);
-	void draw_component(const UIComponent& uic);
-	// void draw_component(const EuclideanSpace& espc);
-	void draw_component(const MenuBar& tbar);
-	void draw_component(const Table& tab);
-	const void set_region(const UIComponent& uic, const gfx::Rect& rect);
-	const Region& get_region(const gfx::Rect& rect);
+	// const void set_region(const UIComponent& uic, const gfx::Rect& rect);
+	// const Region& get_region(const gfx::Rect& rect);
 
 private:
     short _w_ratio, _h_ratio;
@@ -63,6 +51,6 @@ private:
 	std::string _dwable;
 };
 
-} // namespace ui
+} // namespace drawminal
 
 #endif // !_DRAWMINAL_DRAWMINAL_INCLUDED_H_

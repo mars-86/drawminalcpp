@@ -1,0 +1,160 @@
+# depslib dependency file v1.0
+1638384903 source:/home/mariano/Documents/Programming/C++/drawminal/main.cpp
+	<iostream>
+	"drawminal/drawminal.h"
+	"shapes/shapes.h"
+
+1638377999 source:/home/mariano/Documents/Programming/C++/drawminal/shapes/color/color.cpp
+	"color.h"
+
+1638377999 /home/mariano/Documents/Programming/C++/drawminal/shapes/color/color.h
+	"rgb.h"
+
+1638377999 /home/mariano/Documents/Programming/C++/drawminal/shapes/color/rgb.h
+
+1638378325 source:/home/mariano/Documents/Programming/C++/drawminal/vterm/core/vterm.cpp
+	"vterm.h"
+
+1638378325 /home/mariano/Documents/Programming/C++/drawminal/vterm/core/vterm.h
+	<cmath>
+	<vector>
+	"../internal/command.h"
+	"../internal/vtopts.h"
+	"../os/os.h"
+
+1638378325 /home/mariano/Documents/Programming/C++/drawminal/vterm/internal/command.h
+	<iostream>
+	"sequences.h"
+	"colors.h"
+
+1638378325 /home/mariano/Documents/Programming/C++/drawminal/vterm/internal/sequences.h
+	<string>
+
+1638378325 /home/mariano/Documents/Programming/C++/drawminal/vterm/internal/colors.h
+
+1638378325 /home/mariano/Documents/Programming/C++/drawminal/vterm/internal/vtopts.h
+
+1638381107 /home/mariano/Documents/Programming/C++/drawminal/vterm/os/os.h
+	"linux/x11.h"
+	"linux/linux.h"
+	"win32/win32.h"
+
+1638381107 /home/mariano/Documents/Programming/C++/drawminal/vterm/os/linux/x11.h
+	<unistd.h>
+	"../base/platform.h"
+
+1638381107 /home/mariano/Documents/Programming/C++/drawminal/vterm/os/base/platform.h
+	"types.h"
+
+1638381107 /home/mariano/Documents/Programming/C++/drawminal/vterm/os/base/types.h
+	<stdint.h>
+
+1638381107 /home/mariano/Documents/Programming/C++/drawminal/vterm/os/linux/linux.h
+	<unistd.h>
+	<sys/ioctl.h>
+	"../base/platform.h"
+
+1638381107 /home/mariano/Documents/Programming/C++/drawminal/vterm/os/win32/win32.h
+	<windows.h>
+	"../base/platform.h"
+
+1638384511 source:/home/mariano/Documents/Programming/C++/drawminal/drawminal/drawminal.cpp
+	"drawminal.h"
+	<cmath>
+	<cstring>
+
+1638380305 /home/mariano/Documents/Programming/C++/drawminal/drawminal/drawminal.h
+	<vector>
+	"../shapes/base/shape2d.h"
+	"../shapes/coords/point2d.h"
+	"../shapes/coords/point3d.h"
+	"../shapes/2d/line.h"
+	"../shapes/2d/rect.h"
+	"../vterm/vterm.h"
+
+1638377999 /home/mariano/Documents/Programming/C++/drawminal/shapes/base/shape2d.h
+	<vector>
+	"shape.h"
+	"../coords/point2d.h"
+
+1638377999 /home/mariano/Documents/Programming/C++/drawminal/shapes/base/shape.h
+	<iostream>
+	"../color/color.h"
+
+1638377999 /home/mariano/Documents/Programming/C++/drawminal/shapes/coords/point2d.h
+
+1638377999 /home/mariano/Documents/Programming/C++/drawminal/shapes/coords/point3d.h
+	"point2d.h"
+
+1638377999 /home/mariano/Documents/Programming/C++/drawminal/shapes/2d/line.h
+	<cmath>
+	"../base/shape2d.h"
+
+1638377999 /home/mariano/Documents/Programming/C++/drawminal/shapes/2d/rect.h
+	<vector>
+	"../base/shape2d.h"
+	"line.h"
+
+1638378325 /home/mariano/Documents/Programming/C++/drawminal/vterm/vterm.h
+	"core/vterm.h"
+
+1638381107 source:/home/mariano/Documents/Programming/C++/drawminal/vterm/os/linux/linux.cpp
+	"linux.h"
+
+1638381107 source:/home/mariano/Documents/Programming/C++/drawminal/vterm/os/linux/x11.c
+	"x11.h"
+	<stdio.h>
+	<linux/kd.h>
+	<termios.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<unistd.h>
+	<poll.h>
+	<X11/Xlib.h>
+	<stdlib.h>
+	<sys/time.h>
+	<sys/types.h>
+	<unistd.h>
+
+1638381107 source:/home/mariano/Documents/Programming/C++/drawminal/vterm/os/linux/x11.cpp
+	"x11.h"
+	<stdio.h>
+	<linux/kd.h>
+	<termios.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<unistd.h>
+	<stdlib.h>
+	<sys/time.h>
+	<sys/types.h>
+
+1638381107 source:/home/mariano/Documents/Programming/C++/drawminal/vterm/os/win32/win32.cpp
+	"win32.h"
+	<stdio.h>
+	<stdio.h>
+
+1638377999 /home/mariano/Documents/Programming/C++/drawminal/shapes/shapes.h
+	"2d/circle.h"
+	"2d/ellipse.h"
+	"2d/line.h"
+	"2d/parable.h"
+	"2d/rect.h"
+	"2d/square.h"
+
+1638377999 /home/mariano/Documents/Programming/C++/drawminal/shapes/2d/circle.h
+	<cmath>
+	"../base/shape2d.h"
+
+1638377999 /home/mariano/Documents/Programming/C++/drawminal/shapes/2d/ellipse.h
+	"../base/shape2d.h"
+
+1638377999 /home/mariano/Documents/Programming/C++/drawminal/shapes/2d/parable.h
+	<cmath>
+	<iostream>
+	"../base/shape2d.h"
+	"../coords/point2d.h"
+
+1638377999 /home/mariano/Documents/Programming/C++/drawminal/shapes/2d/square.h
+	<vector>
+	"rect.h"
+
