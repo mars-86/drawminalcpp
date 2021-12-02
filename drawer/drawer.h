@@ -3,14 +3,10 @@
 #pragma once
 
 #include <vector>
-#include "../shapes/base/shape2d.h"
-#include "../shapes/coords/point2d.h"
+#include "draw_strategy.h"
 #include "../shapes/coords/point3d.h"
 #include "../shapes/2d/line.h"
 #include "../shapes/2d/rect.h"
-#include "../vterm/vterm.h"
-
-extern const unsigned int pixel_map[4][2];
 
 namespace drawminal {
 
@@ -24,13 +20,9 @@ public:
 	Drawer(void *context, const VTopt &opts, short w_ratio, short h_ratio);
 	~Drawer();
 
-	void draw(const char *s, int x, int y);
-	void draw(const char *s, int x, int y, int z);
 	void draw(const std::vector<Point2D>& points);
 	void draw(const std::vector<Point3D>& points);
 	void draw(const Shape2D& shape);
-	void erase(int x, int y);
-	void erase(int x, int y, int z);
 	void erase(const std::vector<Point2D>& points);
 	void erase(const std::vector<Point3D>& points);
 	void erase(const Shape2D& shape);
@@ -42,27 +34,9 @@ public:
 
 private:
     short _w_ratio = 2, _h_ratio = 4;
-	short _dwable_w, _dwable_h;
-	int _linear_length;
-	std::string _dwable;
+    int _linear_length;
+	DrawStrategy *_strategy = nullptr;
 
-	inline void _draw(const std::vector<Point2D> points)
-	{
-        for (auto i : points) {
-            int x = (i.get_x() - 1), y = (i.get_y() - 1), xr = x / _w_ratio, yr = y  / _h_ratio;
-            // std::cout << "{" << (y % _h_ratio) << " " << (x % _w_ratio) << "} = " << pixel_map[y % _h_ratio][x % _w_ratio] << " ";
-            _buffer[yr * get_width() + xr] |= pixel_map[y % _h_ratio][x % _w_ratio];
-        }
-	}
-
-	inline void _erase(const std::vector<Point2D> points)
-	{
-        for (auto i : points) {
-            int x = (i.get_x() - 1), y = (i.get_y() - 1), xr = x / _w_ratio, yr = y  / _h_ratio;
-            // std::cout << "{" << (y % _h_ratio) << " " << (x % _w_ratio) << "} = " << pixel_map[y % _h_ratio][x % _w_ratio] << " ";
-            _buffer[yr * get_width() + xr] &= ~pixel_map[y % _h_ratio][x % _w_ratio];
-        }
-	}
 };
 
 } // namespace drawminal
