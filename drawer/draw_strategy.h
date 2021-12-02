@@ -20,16 +20,8 @@ public:
         _draw(points);
     }
 
-    void draw(const Shape2D &shape) {
-        _draw(shape.get_bounds());
-    }
-
     void erase(const std::vector<Point2D> &points) {
         erase(points);
-    }
-
-    void erase(const Shape2D &shape) {
-        _erase(shape.get_bounds());
     }
 
     void print(void) {

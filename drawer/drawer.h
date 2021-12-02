@@ -15,9 +15,11 @@ using namespace vterm;
 
 class Drawer : public VTerm {
 public:
+    enum class DrawingStrategy;
+
 	Drawer();
-	Drawer(void *context, const VTopt &opts);
-	Drawer(void *context, const VTopt &opts, short w_ratio, short h_ratio);
+	Drawer(DrawingStrategy stg, const VTopt &opts);
+	Drawer(DrawingStrategy stg, const VTopt &opts, short w_ratio, short h_ratio);
 	~Drawer();
 
 	void draw(const std::vector<Point2D>& points);
@@ -32,10 +34,15 @@ public:
 	// const void set_region(const UIComponent& uic, const gfx::Rect& rect);
 	// const Region& get_region(const gfx::Rect& rect);
 
+	enum class DrawingStrategy {
+        BUFFERED,
+        NATIVE
+    };
+
 private:
+    DrawStrategy *_strategy = nullptr;
     short _w_ratio = 2, _h_ratio = 4;
     int _linear_length;
-	DrawStrategy *_strategy = nullptr;
 
 };
 

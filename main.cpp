@@ -2,12 +2,13 @@
 #include "drawminal.h"
 
 using namespace std;
+using namespace drawminal;
 
 int main()
 {
-    drawminal::Drawer dw(nullptr, {VTOPT_SCREEN_BUFFER_ALTERNATE, VTOPT_CURSOR_HIDE});
+    Drawer dw(Drawer::DrawingStrategy::BUFFERED, {VTOPT_SCREEN_BUFFER_ALTERNATE, VTOPT_CURSOR_HIDE});
 
-    shapes::Line ln(10, 50, 80, 80, {0, 0, 0});
+    shapes::Line ln(10, 10, 80, 20, {0, 0, 0});
     dw.draw(ln);
     dw.print();
 
