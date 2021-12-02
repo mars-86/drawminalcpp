@@ -1,8 +1,7 @@
 # depslib dependency file v1.0
-1638384903 source:/home/mariano/Documents/Programming/C++/drawminal/main.cpp
+1638413339 source:/home/mariano/Documents/Programming/C++/drawminal/main.cpp
 	<iostream>
-	"drawminal/drawminal.h"
-	"shapes/shapes.h"
+	"drawminal.h"
 
 1638377999 source:/home/mariano/Documents/Programming/C++/drawminal/shapes/color/color.cpp
 	"color.h"
@@ -58,12 +57,12 @@
 	<windows.h>
 	"../base/platform.h"
 
-1638384511 source:/home/mariano/Documents/Programming/C++/drawminal/drawminal/drawminal.cpp
+1638412611 source:/home/mariano/Documents/Programming/C++/drawminal/drawminal/drawminal.cpp
 	"drawminal.h"
 	<cmath>
 	<cstring>
 
-1638380305 /home/mariano/Documents/Programming/C++/drawminal/drawminal/drawminal.h
+1638412544 /home/mariano/Documents/Programming/C++/drawminal/drawminal/drawminal.h
 	<vector>
 	"../shapes/base/shape2d.h"
 	"../shapes/coords/point2d.h"
@@ -157,4 +156,25 @@
 1638377999 /home/mariano/Documents/Programming/C++/drawminal/shapes/2d/square.h
 	<vector>
 	"rect.h"
+
+1638415590 source:/home/mariano/Documents/Programming/C++/drawminal/drawer/drawer.cpp
+	"drawer.h"
+	"charmap.h"
+	<cmath>
+	<cstring>
+
+1638417334 /home/mariano/Documents/Programming/C++/drawminal/drawer/drawer.h
+	<vector>
+	"../shapes/base/shape2d.h"
+	"../shapes/coords/point2d.h"
+	"../shapes/coords/point3d.h"
+	"../shapes/2d/line.h"
+	"../shapes/2d/rect.h"
+	"../vterm/vterm.h"
+
+1638413304 /home/mariano/Documents/Programming/C++/drawminal/drawminal.h
+	"drawer/drawer.h"
+	"shapes/shapes.h"
+
+1638415599 /home/mariano/Documents/Programming/C++/drawminal/drawer/charmap.h
 

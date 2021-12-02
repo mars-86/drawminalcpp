@@ -32,8 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="drawminal/drawminal.cpp" />
-		<Unit filename="drawminal/drawminal.h" />
+		<Unit filename="drawer/charmap.h" />
+		<Unit filename="drawer/drawer.cpp" />
+		<Unit filename="drawer/drawer.h" />
+		<Unit filename="drawminal.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="shapes/2d/circle.h" />
 		<Unit filename="shapes/2d/ellipse.h" />

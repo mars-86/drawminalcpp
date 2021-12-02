@@ -1,16 +1,15 @@
 #include <iostream>
-#include "drawminal/drawminal.h"
-#include "shapes/shapes.h"
+#include "drawminal.h"
 
 using namespace std;
 
 int main()
 {
-    drawminal::Drawminal dm(2, 4);
+    drawminal::Drawer dw(nullptr, {VTOPT_SCREEN_BUFFER_ALTERNATE, VTOPT_CURSOR_HIDE});
 
-    shapes::Line ln(30, 50, 150, 80, {0, 0, 0});
-    dm.draw(ln);
-    dm.print();
+    shapes::Line ln(10, 50, 80, 80, {0, 0, 0});
+    dw.draw(ln);
+    dw.print();
 
     std::getchar();
     return 0;
