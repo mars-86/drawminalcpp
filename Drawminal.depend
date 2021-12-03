@@ -157,12 +157,12 @@
 	<vector>
 	"rect.h"
 
-1638488545 source:/home/mariano/Documents/Programming/C++/drawminal/drawer/drawer.cpp
+1638490576 source:/home/mariano/Documents/Programming/C++/drawminal/drawer/drawer.cpp
 	"drawer.h"
-	"buffer_coloured_strategy.h"
-	"buffer_strategy.h"
-	"terminal_coloured_strategy.h"
-	"terminal_strategy.h"
+	"buffered_color_strategy.h"
+	"buffered_strategy.h"
+	"native_color_strategy.h"
+	"native_strategy.h"
 	"charmap.h"
 
 1638488801 /home/mariano/Documents/Programming/C++/drawminal/drawer/drawer.h
@@ -196,6 +196,22 @@
 	"charmap.h"
 
 1638488333 /home/mariano/Documents/Programming/C++/drawminal/drawer/buffer_coloured_strategy.h
+	"draw_strategy.h"
+	"charmap.h"
+
+1638489874 /home/mariano/Documents/Programming/C++/drawminal/drawer/buffered_color_strategy.h
+	"draw_strategy.h"
+	"charmap.h"
+
+1638489899 /home/mariano/Documents/Programming/C++/drawminal/drawer/buffered_strategy.h
+	"draw_strategy.h"
+	"charmap.h"
+
+1638489106 /home/mariano/Documents/Programming/C++/drawminal/drawer/native_color_strategy.h
+	"draw_strategy.h"
+	"charmap.h"
+
+1638489424 /home/mariano/Documents/Programming/C++/drawminal/drawer/native_strategy.h
 	"draw_strategy.h"
 	"charmap.h"
 
