@@ -36,7 +36,9 @@ public:
 
 	enum class DrawingStrategy {
         BUFFERED,
-        NATIVE
+        BUFFERED_COLOR,
+        NATIVE,
+        NATIVE_COLOR
     };
 
 private:
@@ -44,6 +46,7 @@ private:
     short _w_ratio = 2, _h_ratio = 4;
     int _linear_length;
 
+    void _set_strategy(DrawingStrategy stg);
 };
 
 } // namespace drawminal

@@ -1,16 +1,17 @@
-#ifndef _DRAWER_BUFFER_STRATEGY_INCLUDED_H_
-#define _DRAWER_BUFFER_STRATEGY_INCLUDED_H_
+#ifndef _DRAWER_BUFFERED_COLOR_STRATEGY_INCLUDED_H_
+#define _DRAWER_BUFFERED_COLOR_STRATEGY_INCLUDED_H_
 
 #include "draw_strategy.h"
 #include "charmap.h"
 
 namespace drawminal {
 
-class BufferStrategy : public DrawStrategy {
+class BufferedColorStrategy : public DrawStrategy {
 public:
-    BufferStrategy() {}
-    ~BufferStrategy() {}
+    BufferedColorStrategy() {}
+    ~BufferedColorStrategy() {}
 
+private:
     inline void _draw(const std::vector<Point2D> &points) override
     {
         for (auto i : points) {
@@ -33,11 +34,13 @@ public:
 	{
         std::string s;
         for (auto i : _buffer) s += (i ? braille_map[i] : " ");
+        text_format(vterm::text::FG_BLUE);
         std::cout << s;
+        text_format(vterm::text::DEFAULT);
 	}
 
 };
 
 } // namespace drawminal
 
-#endif // !_DRAWER_BUFFER_STRATEGY_INCLUDED_H_
+#endif // !_DRAWER_BUFFERED_COLOR_STRATEGY_INCLUDED_H_

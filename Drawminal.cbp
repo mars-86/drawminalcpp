@@ -37,6 +37,7 @@
 		<Unit filename="drawer/draw_strategy.h" />
 		<Unit filename="drawer/drawer.cpp" />
 		<Unit filename="drawer/drawer.h" />
+		<Unit filename="drawer/terminal_coloured_strategy.h" />
 		<Unit filename="drawer/terminal_strategy.h" />
 		<Unit filename="drawminal.h" />
 		<Unit filename="main.cpp" />

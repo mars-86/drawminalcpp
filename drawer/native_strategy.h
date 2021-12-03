@@ -1,15 +1,17 @@
-#ifndef _DRAWER_TERMINAL_STRATEGY_INCLUDED_H_
-#define _DRAWER_TERMINAL_STRATEGY_INCLUDED_H_
+#ifndef _DRAWER_NATIVE_STRATEGY_INCLUDED_H_
+#define _DRAWER_NATIVE_STRATEGY_INCLUDED_H_
 
 #include "draw_strategy.h"
 #include "charmap.h"
 
 namespace drawminal {
 
-class TerminalStrategy : public DrawStrategy {
+class NativeStrategy : public DrawStrategy {
 public:
-    TerminalStrategy() {}
-    ~TerminalStrategy() {}
+    NativeStrategy() {}
+    ~NativeStrategy() {}
+
+private:
 
     inline void _draw(const std::vector<Point2D> &points) override
     {
@@ -27,4 +29,4 @@ public:
 
 } // namespace drawminal
 
-#endif // !_DRAWER_TERMINAL_STRATEGY_INCLUDED_H_
+#endif // !_DRAWER_NATIVE_STRATEGY_INCLUDED_H_
