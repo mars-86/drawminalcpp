@@ -34,8 +34,13 @@ private:
 
 	inline void _print(void) override
 	{
-        // osstream << _buffer
+        // for (auto i : _buffer) std::cout
 	}
+
+	 /* std::ostream &operator<<(std::ostream &o, const Objeto &objeto)
+    {
+        return o << "" << &objeto;
+    } */
 
 };
 

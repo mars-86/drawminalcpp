@@ -4,16 +4,13 @@
 
 #include <vector>
 #include "draw_strategy.h"
-#include "../shapes/coords/point3d.h"
-#include "../shapes/2d/line.h"
-#include "../shapes/2d/rect.h"
 
 namespace drawminal {
 
 using namespace shapes;
 using namespace vterm;
 
-class Drawer : public VTerm {
+class Drawer : public DrawerBase {
 public:
     enum class DrawingStrategy;
 

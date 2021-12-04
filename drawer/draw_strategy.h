@@ -2,16 +2,14 @@
 #define _DRAWER_DRAW_STRATEGY_INCLUDED_H_
 #pragma once
 
-#include "../vterm/vterm.h"
-#include "../shapes/base/shape2d.h"
-#include "../shapes/coords/point2d.h"
+#include "drawer_base.h"
 
 namespace drawminal {
 
 using namespace vterm;
 using namespace shapes;
 
-class DrawStrategy : public VTerm {
+class DrawStrategy : public DrawerBase {
 public:
     DrawStrategy() : _w_ratio(2), _h_ratio(4) {}
     virtual ~DrawStrategy() {}
