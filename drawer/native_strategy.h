@@ -13,17 +13,26 @@ public:
 
 private:
 
-    inline void _draw(const std::vector<Point2D> &points) override
+    inline void _draw(const Shape2D &shape) override
     {
-        for (auto i : points) put(".", i.get_x(), i.get_y());
+        _shape_buffer.push_back(&shape);
+        _base_draw(shape.get_bounds());
     }
 
-    inline void _erase(const std::vector<Point2D> &points) override
+    inline void _erase(const Shape2D &shape) override
     {
-        for (auto i : points) put(" ", i.get_x(), i.get_y());
+        _base_erase(shape.get_bounds());
     }
 
-    inline void _print(void) override {}
+    inline void _print(void) override
+    {
+        for (auto i : _shape_buffer) {
+            for (auto j : i->get_bounds()) {
+                int yr = (j.get_y() - 1) / _h_ratio, xr = (j.get_x()) / _w_ratio;
+                put(braille_map[_buffer[yr * get_width() + xr]].c_str(), xr, yr);
+            }
+        }
+    }
 
 };
 

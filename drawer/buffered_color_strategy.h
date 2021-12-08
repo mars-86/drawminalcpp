@@ -12,22 +12,23 @@ public:
     ~BufferedColorStrategy() {}
 
 private:
-    inline void _draw(const std::vector<Point2D> &points) override
+    inline void _draw(const Shape2D &shape) override
     {
+        auto points = shape.get_bounds(); auto color = shape.get_color();
+        int x, y, xr, yr;
         for (auto i : points) {
             int x = (i.get_x() - 1), y = (i.get_y() - 1), xr = x / _w_ratio, yr = y  / _h_ratio;
             // std::cout << "{" << (y % _h_ratio) << " " << (x % _w_ratio) << "} = " << pixel_map[y % _h_ratio][x % _w_ratio] << " ";
             _buffer[yr * get_width() + xr] |= pixel_map[y % _h_ratio][x % _w_ratio];
         }
+        xr = (points[0].get_x() - 1) / _w_ratio, yr = (points[0].get_y() -1) / _h_ratio;
+        int v_temp = _buffer[yr * get_width() + xr];
+        _buffer[yr * get_width() + xr] |= (color.get_color() | v_temp);
     }
 
-    inline void _erase(const std::vector<Point2D> &points) override
+    inline void _erase(const Shape2D &shape) override
 	{
-        for (auto i : points) {
-            int x = (i.get_x() - 1), y = (i.get_y() - 1), xr = x / _w_ratio, yr = y  / _h_ratio;
-            // std::cout << "{" << (y % _h_ratio) << " " << (x % _w_ratio) << "} = " << pixel_map[y % _h_ratio][x % _w_ratio] << " ";
-            _buffer[yr * get_width() + xr] &= ~pixel_map[y % _h_ratio][x % _w_ratio];
-        }
+        _base_erase(shape.get_bounds());
 	}
 
 	inline void _print(void) override

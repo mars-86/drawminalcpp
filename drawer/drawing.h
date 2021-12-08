@@ -1,47 +1,38 @@
-#ifndef _DRAWER_DRAWING_INCLUDED_H_
-#define _DRAWER_DRAWING_INCLUDED_H_
+#ifndef _DRAWER_PIXEL_INCLUDED_H_
+#define _DRAWER_PIXEL_INCLUDED_H_
 #pragma once
 
 #include <vector>
 #include "../shapes/coords/point2d.h"
 #include "../shapes/coords/point3d.h"
+#include "../shapes/color/color.h"
 
 namespace drawminal {
 
-template <typename T>
-class Drawing {
+using namespace shapes;
+
+class Pixel2D : public Point2D {
 public:
-    Drawing();
-    ~Drawing();
+    Pixel2D(short x, short y) : Point2D(x, y), _color({0, 0, 0}) {};
+    Pixel2D(short x, short y, const Color color) : Point2D(x, y), _color(color) {};
+    ~Pixel2D() {};
 
-    const std::vector<T> get_points(void) const
+    int get_color(void)
     {
-        return _points;
+        return _color.get_color();
     }
 
-    void set_points(std::vector<T> points)
+    void set_color(int r, int g, int b)
     {
-        _points = points;
-    }
-
-    int get_color(void) const
-    {
-        return _color;
-    }
-
-    void set_color(int color)
-    {
-        _color = color;
+        _color.set_red(r);
+        _color.set_green(g);
+        _color.set_blue(b);
     }
 
 private:
-    std::vector<T> _points;
-    int _color;
+    Color _color;
 };
-
-typedef Drawing<shapes::Point2D> Drawing2D;
-typedef Drawing<shapes::Point3D> Drawing3D;
 
 } // namespace drawminal
 
-#endif // !_DRAWER_DRAWING_INCLUDED_H_
+#endif // !_DRAWER_PIXEL_INCLUDED_H_

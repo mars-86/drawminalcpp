@@ -19,12 +19,14 @@ public:
 	Drawer(DrawingStrategy stg, const VTopt &opts, short w_ratio, short h_ratio);
 	~Drawer();
 
-	void draw(const std::vector<Point2D>& points);
-	void draw(const std::vector<Point3D>& points);
-	void draw(const Shape2D& shape);
-	void erase(const std::vector<Point2D>& points);
-	void erase(const std::vector<Point3D>& points);
-	void erase(const Shape2D& shape);
+	void draw(const std::vector<Pixel2D>& pixels) const;
+	void draw(const std::vector<Point2D>& points) const;
+	void draw(const std::vector<Point3D>& points) const;
+	void draw(const Shape2D& shape) const;
+	// void draw(const std::vector<Pixel3D> &pixels) const;
+	void erase(const std::vector<Point2D>& points) const;
+	void erase(const std::vector<Point3D>& points) const;
+	void erase(const Shape2D& shape) const;
 	void print(void);
 	void draw_rect(const Rect& rect, const Color& color);
 	void fill_rect(const Rect& rect, const Color& color);

@@ -32,30 +32,40 @@ Drawer::~Drawer()
     if (_strategy) delete _strategy;
 }
 
-void Drawer::draw(const std::vector<Point2D>& points)
+void Drawer::draw(const std::vector<Pixel2D>& pixels) const
 {
-    _strategy->draw(points);
+    // _strategy->draw(drawing.get_points());
+}
+/*
+void Drawer::draw(const Drawing3D &drawing) const
+{
+    // _strategy->draw(drawing.get_points());
+}
+*/
+void Drawer::draw(const std::vector<Point2D>& points) const
+{
+    // _strategy->draw(points);
 }
 
-void Drawer::draw(const Shape2D& shape)
+void Drawer::draw(const Shape2D& shape) const
 {
-    _strategy->draw(shape.get_bounds());
+    _strategy->draw(shape);
 }
 
-void Drawer::erase(const std::vector<Point2D>& points)
+void Drawer::erase(const std::vector<Point2D>& points) const
 {
-    _strategy->erase(points);
+    // _strategy->erase(points);
 }
 
-void Drawer::erase(const Shape2D& shape)
+void Drawer::erase(const Shape2D& shape) const
 {
-    _strategy->erase(shape.get_bounds());
+    _strategy->erase(shape);
 }
 
 void Drawer::print(void)
 {
-    _strategy->print();
     set_cursor_pos(1, 1);
+    _strategy->print();
 }
 
 void Drawer::_set_strategy(DrawingStrategy stg)

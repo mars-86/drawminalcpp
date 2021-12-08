@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1638488629 source:/home/mariano/Documents/Programming/C++/drawminal/main.cpp
+1638986697 source:/home/mariano/Documents/Programming/C++/drawminal/main.cpp
 	<iostream>
 	"drawminal.h"
 
@@ -157,7 +157,7 @@
 	<vector>
 	"rect.h"
 
-1638629614 source:/home/mariano/Documents/Programming/C++/drawminal/drawer/drawer.cpp
+1638821553 source:/home/mariano/Documents/Programming/C++/drawminal/drawer/drawer.cpp
 	"drawer.h"
 	"buffered_color_strategy.h"
 	"buffered_strategy.h"
@@ -165,10 +165,9 @@
 	"native_strategy.h"
 	"charmap.h"
 
-1638629693 /home/mariano/Documents/Programming/C++/drawminal/drawer/drawer.h
+1638741059 /home/mariano/Documents/Programming/C++/drawminal/drawer/drawer.h
 	<vector>
 	"draw_strategy.h"
-	"drawer_base.h"
 
 1638478052 /home/mariano/Documents/Programming/C++/drawminal/drawminal.h
 	"drawer/drawer.h"
@@ -176,7 +175,7 @@
 
 1638478052 /home/mariano/Documents/Programming/C++/drawminal/drawer/charmap.h
 
-1638629925 /home/mariano/Documents/Programming/C++/drawminal/drawer/draw_strategy.h
+1638986061 /home/mariano/Documents/Programming/C++/drawminal/drawer/draw_strategy.h
 	"drawer_base.h"
 
 1638485996 /home/mariano/Documents/Programming/C++/drawminal/drawer/buffer_strategy.h
@@ -195,30 +194,31 @@
 	"draw_strategy.h"
 	"charmap.h"
 
-1638489874 /home/mariano/Documents/Programming/C++/drawminal/drawer/buffered_color_strategy.h
+1638820606 /home/mariano/Documents/Programming/C++/drawminal/drawer/buffered_color_strategy.h
 	"draw_strategy.h"
 	"charmap.h"
 
-1638489899 /home/mariano/Documents/Programming/C++/drawminal/drawer/buffered_strategy.h
+1638757800 /home/mariano/Documents/Programming/C++/drawminal/drawer/buffered_strategy.h
 	"draw_strategy.h"
 	"charmap.h"
 
-1638489106 /home/mariano/Documents/Programming/C++/drawminal/drawer/native_color_strategy.h
+1638986587 /home/mariano/Documents/Programming/C++/drawminal/drawer/native_color_strategy.h
 	"draw_strategy.h"
 	"charmap.h"
 
-1638489424 /home/mariano/Documents/Programming/C++/drawminal/drawer/native_strategy.h
+1638757684 /home/mariano/Documents/Programming/C++/drawminal/drawer/native_strategy.h
 	"draw_strategy.h"
 	"charmap.h"
 
-1638630311 /home/mariano/Documents/Programming/C++/drawminal/drawer/drawer_base.h
+1638738297 /home/mariano/Documents/Programming/C++/drawminal/drawer/drawer_base.h
 	<vector>
 	"drawing.h"
 	"../vterm/vterm.h"
 	"../shapes/shapes.h"
 
-1638629137 /home/mariano/Documents/Programming/C++/drawminal/drawer/drawing.h
+1638740994 /home/mariano/Documents/Programming/C++/drawminal/drawer/drawing.h
 	<vector>
 	"../shapes/coords/point2d.h"
 	"../shapes/coords/point3d.h"
+	"../shapes/color/color.h"
 
