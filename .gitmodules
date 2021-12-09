@@ -1,6 +1,8 @@
 [submodule "shapes"]
 	path = shapes
 	url = https://github.com/mars-86/shapes.git
+	branch = develop
 [submodule "vterm"]
 	path = vterm
 	url = https://github.com/mars-86/vterm.git
+	branch = develop
