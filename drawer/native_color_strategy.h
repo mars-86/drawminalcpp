@@ -23,6 +23,7 @@ private:
         _base_erase(shape.get_bounds());
     }
 
+    // FIX: some pixels missing.
     inline void _print(void) override
     {
         for (auto i : _shape_buffer) {

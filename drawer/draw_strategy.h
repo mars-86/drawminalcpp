@@ -3,6 +3,7 @@
 #pragma once
 
 #include "drawer_base.h"
+extern const unsigned int pixel_map[4][2];
 
 namespace drawminal {
 
@@ -44,7 +45,7 @@ protected:
     short _color = 7;
     std::vector<const Shape2D*> _shape_buffer;
 
-    inline void _base_draw(std::vector<Point2D> &points)
+    inline void _base_draw(const std::vector<Point2D> &points)
     {
         for (auto i : points) {
             int x = (i.get_x() - 1), y = (i.get_y() - 1), xr = x / _w_ratio, yr = y  / _h_ratio;
@@ -53,7 +54,7 @@ protected:
         }
     }
 
-    inline void _base_erase(std::vector<Point2D> &points)
+    inline void _base_erase(const std::vector<Point2D> &points)
     {
         for (auto i : points) {
             int x = (i.get_x() - 1), y = (i.get_y() - 1), xr = x / _w_ratio, yr = y  / _h_ratio;

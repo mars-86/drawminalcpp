@@ -14,14 +14,14 @@ Drawer::Drawer()
 }
 
 Drawer::Drawer(DrawingStrategy stg, const VTopt &opts)
-	: _linear_length(get_width() * get_height())
+	: DrawerBase(opts), _linear_length(get_width() * get_height())
 {
     _set_strategy(stg);
     // for (int i = 0; i < _linear_length - 1; ++i) _dwable += " ";
 }
 
 Drawer::Drawer(DrawingStrategy stg, const VTopt &opts, short w_ratio, short h_ratio)
-	: _w_ratio(w_ratio), _h_ratio(h_ratio), _linear_length(get_width() * get_height())
+	: DrawerBase(opts), _w_ratio(w_ratio), _h_ratio(h_ratio), _linear_length(get_width() * get_height())
 {
     _set_strategy(stg);
     // for (int i = 0; i < _linear_length - 1; ++i) _dwable += " ";

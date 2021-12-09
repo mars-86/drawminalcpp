@@ -13,8 +13,9 @@ using namespace vterm;
 
 class DrawerBase : public VTerm {
 public:
-	DrawerBase() {};
-	~DrawerBase() {};
+    DrawerBase() {}
+	DrawerBase(const VTopt &opts) : VTerm(opts) {}
+	virtual ~DrawerBase() {}
 
 private:
     short _w_ratio = 2, _h_ratio = 4;
