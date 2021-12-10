@@ -222,3 +222,10 @@
 	"../shapes/coords/point3d.h"
 	"../shapes/color/color.h"
 
+1639107945 source:/home/mariano/Documents/Programming/C++/drawminal/animation/frame.cpp
+	"frame.h"
+
+1639107953 /home/mariano/Documents/Programming/C++/drawminal/animation/frame.h
+	<vector>
+	"../shapes/base/shape2d.h"
+
