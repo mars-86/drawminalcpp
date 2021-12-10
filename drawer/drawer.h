@@ -4,16 +4,13 @@
 
 #include <vector>
 #include "draw_strategy.h"
-#include "../shapes/coords/point3d.h"
-#include "../shapes/2d/line.h"
-#include "../shapes/2d/rect.h"
 
 namespace drawminal {
 
 using namespace shapes;
 using namespace vterm;
 
-class Drawer : public VTerm {
+class Drawer : public DrawerBase {
 public:
     enum class DrawingStrategy;
 
@@ -22,12 +19,14 @@ public:
 	Drawer(DrawingStrategy stg, const VTopt &opts, short w_ratio, short h_ratio);
 	~Drawer();
 
-	void draw(const std::vector<Point2D>& points);
-	void draw(const std::vector<Point3D>& points);
-	void draw(const Shape2D& shape);
-	void erase(const std::vector<Point2D>& points);
-	void erase(const std::vector<Point3D>& points);
-	void erase(const Shape2D& shape);
+	void draw(const std::vector<Pixel2D>& pixels) const;
+	void draw(const std::vector<Point2D>& points) const;
+	void draw(const std::vector<Point3D>& points) const;
+	void draw(const Shape2D& shape) const;
+	// void draw(const std::vector<Pixel3D> &pixels) const;
+	void erase(const std::vector<Point2D>& points) const;
+	void erase(const std::vector<Point3D>& points) const;
+	void erase(const Shape2D& shape) const;
 	void print(void);
 	void draw_rect(const Rect& rect, const Color& color);
 	void fill_rect(const Rect& rect, const Color& color);
@@ -36,7 +35,9 @@ public:
 
 	enum class DrawingStrategy {
         BUFFERED,
-        NATIVE
+        BUFFERED_COLOR,
+        NATIVE,
+        NATIVE_COLOR
     };
 
 private:
@@ -44,6 +45,7 @@ private:
     short _w_ratio = 2, _h_ratio = 4;
     int _linear_length;
 
+    void _set_strategy(DrawingStrategy stg);
 };
 
 } // namespace drawminal

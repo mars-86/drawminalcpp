@@ -1,18 +1,22 @@
-#ifndef _DRAWER_BUFFER_STRATEGY_INCLUDED_H_
-#define _DRAWER_BUFFER_STRATEGY_INCLUDED_H_
+#ifndef _DRAWER_STREAM_STRATEGY_INCLUDED_H_
+#define _DRAWER_STREAM_STRATEGY_INCLUDED_H_
 
 #include "draw_strategy.h"
 #include "charmap.h"
 
+// FIX: inherit from buffered
+
 namespace drawminal {
 
-class BufferStrategy : public DrawStrategy {
+class StreamStrategy : public DrawStrategy {
 public:
-    BufferStrategy() {}
-    ~BufferStrategy() {}
+    StreamStrategy() {}
+    ~StreamStrategy() {}
 
-    inline void _draw(const std::vector<Point2D> &points) override
+private:
+    inline void _draw(const Shape2D &shape) override
     {
+        auto points = shape.get_bounds();
         for (auto i : points) {
             int x = (i.get_x() - 1), y = (i.get_y() - 1), xr = x / _w_ratio, yr = y  / _h_ratio;
             // std::cout << "{" << (y % _h_ratio) << " " << (x % _w_ratio) << "} = " << pixel_map[y % _h_ratio][x % _w_ratio] << " ";
@@ -20,8 +24,9 @@ public:
         }
     }
 
-    inline void _erase(const std::vector<Point2D> &points) override
+    inline void _erase(const Shape2D &shape) override
 	{
+        auto points = shape.get_bounds();
         for (auto i : points) {
             int x = (i.get_x() - 1), y = (i.get_y() - 1), xr = x / _w_ratio, yr = y  / _h_ratio;
             // std::cout << "{" << (y % _h_ratio) << " " << (x % _w_ratio) << "} = " << pixel_map[y % _h_ratio][x % _w_ratio] << " ";
@@ -31,13 +36,16 @@ public:
 
 	inline void _print(void) override
 	{
-        std::string s;
-        for (auto i : _buffer) s += (i ? braille_map[i] : " ");
-        std::cout << s;
+        for (auto i : _buffer) std::cout << i;
 	}
+
+    std::ostream &operator<<(std::ostream &o, const Shape2D shape)
+    {
+        return o << &shape;
+    }
 
 };
 
 } // namespace drawminal
 
-#endif // !_DRAWER_BUFFER_STRATEGY_INCLUDED_H_
+#endif // !_DRAWER_BUFFERED_STRATEGY_INCLUDED_H_

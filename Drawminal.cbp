@@ -32,12 +32,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="drawer/buffer_strategy.h" />
+		<Unit filename="drawer/buffered_color_strategy.h" />
+		<Unit filename="drawer/buffered_strategy.h" />
 		<Unit filename="drawer/charmap.h" />
 		<Unit filename="drawer/draw_strategy.h" />
 		<Unit filename="drawer/drawer.cpp" />
 		<Unit filename="drawer/drawer.h" />
-		<Unit filename="drawer/terminal_strategy.h" />
+		<Unit filename="drawer/drawer_base.h" />
+		<Unit filename="drawer/drawing.h" />
+		<Unit filename="drawer/native_color_strategy.h" />
+		<Unit filename="drawer/native_strategy.h" />
+		<Unit filename="drawer/stream_strategy.h" />
 		<Unit filename="drawminal.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="shapes/2d/circle.h" />
