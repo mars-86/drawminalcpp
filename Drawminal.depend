@@ -222,10 +222,17 @@
 	"../shapes/coords/point3d.h"
 	"../shapes/color/color.h"
 
-1639107945 source:/home/mariano/Documents/Programming/C++/drawminal/animation/frame.cpp
+1639260210 source:/home/mariano/Documents/Programming/C++/drawminal/animation/frame.cpp
 	"frame.h"
 
-1639107953 /home/mariano/Documents/Programming/C++/drawminal/animation/frame.h
+1639162039 /home/mariano/Documents/Programming/C++/drawminal/animation/frame.h
+	<memory>
 	<vector>
 	"../shapes/base/shape2d.h"
+
+1639158130 source:/home/mariano/Documents/Programming/C++/drawminal/animation/scene.cpp
+	"scene.h"
+
+1639156999 /home/mariano/Documents/Programming/C++/drawminal/animation/scene.h
+	"frame.h"
 

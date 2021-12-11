@@ -32,6 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="animation/frame.cpp" />
+		<Unit filename="animation/frame.h" />
+		<Unit filename="animation/scene.cpp" />
+		<Unit filename="animation/scene.h" />
 		<Unit filename="drawer/buffered_color_strategy.h" />
 		<Unit filename="drawer/buffered_strategy.h" />
 		<Unit filename="drawer/charmap.h" />
