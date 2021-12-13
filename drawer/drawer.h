@@ -8,6 +8,7 @@
 namespace drawminal {
 
 using namespace shapes;
+using namespace animation;
 using namespace vterm;
 
 class Drawer : public DrawerBase {
@@ -19,6 +20,7 @@ public:
 	Drawer(DrawingStrategy stg, const VTopt &opts, short w_ratio, short h_ratio);
 	~Drawer();
 
+	void draw(const Object& object) const;
 	void draw(const std::vector<Pixel2D>& pixels) const;
 	void draw(const std::vector<Point2D>& points) const;
 	void draw(const std::vector<Point3D>& points) const;

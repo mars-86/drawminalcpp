@@ -1,17 +1,22 @@
 #ifndef _DRAWMINAL_ANIMATION_SCENE_INCLUDED_H_
 #define _DRAWMINAL_ANIMATION_SCENE_INCLUDED_H_
 
-#include "frame.h"
+#include "object.h"
+
+namespace animation {
 
 class Scene {
 public:
     Scene();
     ~Scene();
 
-    void add_scene(const Frame &frames);
-    const Scene &get_scene(void) const;
+    void add(const Object &object);
+    void play(void) const;
+
 private:
-    std::vector<Frame> _scenes;
+    std::vector<Object> _objects;
 };
+
+} // namespace animation
 
 #endif // _DRAWMINAL_ANIMATION_SCENE_INCLUDED_H_

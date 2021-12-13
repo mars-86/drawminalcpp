@@ -3,17 +3,25 @@
 #pragma once
 
 #include "drawer_base.h"
+#include "../animation/object.h"
+
 extern const unsigned int pixel_map[4][2];
 
 namespace drawminal {
 
 using namespace vterm;
 using namespace shapes;
+using namespace animation;
 
 class DrawStrategy : public DrawerBase {
 public:
     DrawStrategy() : _w_ratio(2), _h_ratio(4) {}
     virtual ~DrawStrategy() {}
+
+    void draw(const Object &object)
+    {
+        _draw(object);
+    }
 
     void draw(const Shape2D &shape)
     {
@@ -64,6 +72,7 @@ protected:
     }
 
 private:
+    virtual inline void _draw(const Object &object) = 0;
     virtual inline void _draw(const Shape2D &shape) = 0;
     virtual inline void _erase(const Shape2D &shape) = 0;
     virtual inline void _print(void) = 0;

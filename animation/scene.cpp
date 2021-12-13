@@ -1,15 +1,20 @@
 #include "scene.h"
 
+namespace animation {
+
 Scene::Scene() {}
 
 Scene::~Scene() {}
 
-void Scene::add_scene(const Frame &frames)
+void Scene::add(const Object &object)
 {
-
+    _objects.push_back(object);
 }
 
-const Scene& Scene::get_scene(void) const
+void Scene::play(void) const
 {
+    for (auto i : _objects) i.get_bounds();
     // return &_scenes;
 }
+
+} // namespace animation

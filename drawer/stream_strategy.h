@@ -14,6 +14,11 @@ public:
     ~StreamStrategy() {}
 
 private:
+    inline void _draw(const Object &object) override
+    {
+        _base_draw(object.get_bounds());
+    }
+
     inline void _draw(const Shape2D &shape) override
     {
         auto points = shape.get_bounds();

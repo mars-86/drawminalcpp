@@ -12,6 +12,11 @@ public:
     ~BufferedStrategy() {}
 
 private:
+    inline void _draw(const Object &object) override
+    {
+        _base_draw(object.get_bounds());
+    }
+
     inline void _draw(const Shape2D &shape) override
     {
         _base_draw(shape.get_bounds());
