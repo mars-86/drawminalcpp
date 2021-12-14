@@ -12,7 +12,7 @@ public:
     ~NativeColorStrategy() {}
 
 private:
-    inline void _draw(const Object &object) override
+    inline void _draw(const Object2D &object) override
     {
         _base_draw(object.get_bounds());
     }

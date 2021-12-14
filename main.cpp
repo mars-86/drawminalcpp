@@ -1,6 +1,6 @@
 #include <iostream>
 #include "drawminal.h"
-#include "animation/object.h"
+#include "base/object2d.h"
 
 using namespace std;
 using namespace drawminal;
@@ -17,12 +17,10 @@ int main()
     // dw.draw(cr);
     // dw.draw(ln);
     // dw.print();
-    animation::Object obj("box", rect->get_bounds());
+    base::Object2D obj("box", rect->get_bounds());
 
     delete rect;
 
-    for (auto i : obj.get_bounds()) std::cout << i;
-    std::getchar();
     // dw.draw(rect);
     dw.draw(obj);
     dw.print();

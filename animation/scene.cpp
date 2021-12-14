@@ -6,7 +6,7 @@ Scene::Scene() {}
 
 Scene::~Scene() {}
 
-void Scene::add(const Object &object)
+void Scene::add(const Object2D &object)
 {
     _objects.push_back(object);
 }

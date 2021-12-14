@@ -47,7 +47,7 @@ void Drawer::draw(const std::vector<Point2D>& points) const
     // _strategy->draw(points);
 }
 
-void Drawer::draw(const Object &object) const
+void Drawer::draw(const Object2D &object) const
 {
     _strategy->draw(object);
 }
