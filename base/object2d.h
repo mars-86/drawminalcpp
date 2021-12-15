@@ -14,6 +14,8 @@ public:
 
     const std::vector<Point2D> &get_bounds(void) const;
     // const std::vector<shapes::Shape2D> get_frames(void) const;
+    void translate(const Point2D &new_pos);
+    void rotate(int angle);
 
 private:
     std::vector<Point2D> _bounds;

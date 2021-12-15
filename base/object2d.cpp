@@ -12,5 +12,15 @@ const std::vector<Point2D> &Object2D::get_bounds(void) const
     return _bounds;
 }
 
+void Object2D::translate(const Point2D &new_pos)
+{
+    for (auto i : _bounds) i += new_pos;
+}
+
+void Object2D::rotate(int angle)
+{
+
+}
+
 } //namespace base
 
