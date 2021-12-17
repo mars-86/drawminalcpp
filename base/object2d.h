@@ -13,12 +13,17 @@ public:
     ~Object2D();
 
     const std::vector<Point2D> &get_bounds(void) const;
+    const Point2D &get_origin(void) const;
     // const std::vector<shapes::Shape2D> get_frames(void) const;
     void translate(const Point2D &new_pos);
     void rotate(int angle);
 
 private:
+    Point2D _origin;
     std::vector<Point2D> _bounds;
+
+    const Point2D _get_center(void);
+    void _set_origin(const Point2D &new_orig);
 
 };
 

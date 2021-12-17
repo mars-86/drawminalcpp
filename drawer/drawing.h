@@ -19,7 +19,7 @@ public:
 
     int get_color(void)
     {
-        return _color.get_color();
+        return _color.get_rgb_color();
     }
 
     void set_color(int r, int g, int b)

@@ -14,19 +14,33 @@ public:
     ~BufferedColorStrategy() {}
 
 private:
+    inline void _draw(const std::vector<Point2D> &points) override
+    {
+        _base_draw(points);
+    }
+
+    inline void _erase(const std::vector<Point2D> &points) override
+    {
+        _base_erase(points);
+    }
 
     inline void _draw(const Object2D &object) override
     {
         _base_draw(object.get_bounds());
     }
 
+    inline void _erase(const Object2D &object) override
+    {
+        _base_erase(object.get_bounds());
+    }
+
     inline void _draw(const Shape2D &shape) override
     {
-        auto points = shape.get_bounds(); auto color = shape.get_color();
+        auto points = shape.get_bounds();// auto color = shape.get_color();
         for (auto i : points) {
             int x = (i.get_x() - 1), y = (i.get_y() - 1), xr = x / _w_ratio, yr = y  / _h_ratio;
             // std::cout << "{" << (y % _h_ratio) << " " << (x % _w_ratio) << "} = " << pixel_map[y % _h_ratio][x % _w_ratio] << " ";
-            _buffer[yr * get_width() + xr] |= ((color.get_color() << 8) | pixel_map[y % _h_ratio][x % _w_ratio]);
+            _buffer[yr * get_width() + xr] |= /*((color.get_color() << 8) |*/ pixel_map[y % _h_ratio][x % _w_ratio]; //);
         }
     }
 
