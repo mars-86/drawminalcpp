@@ -1,13 +1,14 @@
 #include <iostream>
 #include "drawminal.h"
 #include "base/object2d.h"
-#include <unistd.h>
+// #include <unistd.h>
 
 using namespace std;
 using namespace drawminal;
 
 int main()
 {
+    os::_init_instance(nullptr);
     Drawer dw(Drawer::DrawingStrategy::BUFFERED, {VTOPT_SCREEN_BUFFER_ALTERNATE, VTOPT_CURSOR_HIDE});
     shapes::Line ln(50, 50, 100, 50);
     shapes::Circle cr(50, 50, 10);
@@ -28,10 +29,9 @@ int main()
     std::vector<std::vector<Point2D>> box_move;
     for (int i = 0; i < 30; ++i) {
         box_move.push_back(box.get_bounds());
-        box.translate({1, 0});
+        box.translate({1, 1});
     }
     obj.add_animation("move", animation::Animation("box_move", box_move));
-
     // dw.draw(obj2);
     // obj.translate({70, 20});
     // dw.draw(obj);
@@ -47,7 +47,8 @@ int main()
     for (auto i : box_move) {
         dw.draw(i);
         dw.print();
-        usleep(33333);
+        // usleep(33333);v
+        Sleep(30);
         dw.erase(i);
     }
 

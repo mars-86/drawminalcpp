@@ -41,3 +41,9 @@ x32/
 # Codeblocks folders
 obj/
 bin/
+
+# Vs Code
+.vscode
+
+# Cmake
+build/
