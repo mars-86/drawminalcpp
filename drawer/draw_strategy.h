@@ -3,17 +3,40 @@
 #pragma once
 
 #include "drawer_base.h"
+#include "../base/object2d.h"
+
 extern const unsigned int pixel_map[4][2];
 
 namespace drawminal {
 
 using namespace vterm;
 using namespace shapes;
+using namespace base;
 
 class DrawStrategy : public DrawerBase {
 public:
     DrawStrategy() : _w_ratio(2), _h_ratio(4) {}
     virtual ~DrawStrategy() {}
+
+    void draw(const std::vector<Point2D> &points)
+    {
+        _draw(points);
+    }
+
+    void erase(const std::vector<Point2D> &points)
+    {
+        _erase(points);
+    }
+
+    void draw(const Object2D &object)
+    {
+        _draw(object);
+    }
+
+    void erase(const Object2D &object)
+    {
+        _erase(object);
+    }
 
     void draw(const Shape2D &shape)
     {
@@ -64,6 +87,10 @@ protected:
     }
 
 private:
+    virtual inline void _draw(const std::vector<Point2D> &points) = 0;
+    virtual inline void _erase(const std::vector<Point2D> &points) = 0;
+    virtual inline void _draw(const Object2D &object) = 0;
+    virtual inline void _erase(const Object2D &object) = 0;
     virtual inline void _draw(const Shape2D &shape) = 0;
     virtual inline void _erase(const Shape2D &shape) = 0;
     virtual inline void _print(void) = 0;

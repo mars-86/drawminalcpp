@@ -3,9 +3,9 @@
 #pragma once
 
 #include <vector>
-#include "../shapes/coords/point2d.h"
-#include "../shapes/coords/point3d.h"
-#include "../shapes/color/color.h"
+#include "../shapes/lib/coords/point2d.h"
+#include "../shapes/lib/coords/point3d.h"
+#include "../shapes/lib/color/color.h"
 
 namespace drawminal {
 
@@ -19,7 +19,7 @@ public:
 
     int get_color(void)
     {
-        return _color.get_color();
+        return _color.get_rgb_color();
     }
 
     void set_color(int r, int g, int b)

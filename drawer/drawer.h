@@ -8,6 +8,7 @@
 namespace drawminal {
 
 using namespace shapes;
+using namespace base;
 using namespace vterm;
 
 class Drawer : public DrawerBase {
@@ -19,10 +20,12 @@ public:
 	Drawer(DrawingStrategy stg, const VTopt &opts, short w_ratio, short h_ratio);
 	~Drawer();
 
+	void draw(const Object2D& object) const;
 	void draw(const std::vector<Pixel2D>& pixels) const;
 	void draw(const std::vector<Point2D>& points) const;
 	void draw(const std::vector<Point3D>& points) const;
 	void draw(const Shape2D& shape) const;
+	void erase(const Object2D &object) const;
 	// void draw(const std::vector<Pixel3D> &pixels) const;
 	void erase(const std::vector<Point2D>& points) const;
 	void erase(const std::vector<Point3D>& points) const;

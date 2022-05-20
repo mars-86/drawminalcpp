@@ -14,6 +14,26 @@ public:
     ~StreamStrategy() {}
 
 private:
+    inline void _draw(const std::vector<Point2D> &points) override
+    {
+        _base_draw(points);
+    }
+
+    inline void _erase(const std::vector<Point2D> &points) override
+    {
+        _base_erase(points);
+    }
+
+    inline void _draw(const Object2D &object) override
+    {
+        _base_draw(object.get_bounds());
+    }
+
+    inline void _erase(const Object2D &object) override
+    {
+        _base_erase(object.get_bounds());
+    }
+
     inline void _draw(const Shape2D &shape) override
     {
         auto points = shape.get_bounds();

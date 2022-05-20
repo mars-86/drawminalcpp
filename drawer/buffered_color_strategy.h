@@ -14,14 +14,33 @@ public:
     ~BufferedColorStrategy() {}
 
 private:
+    inline void _draw(const std::vector<Point2D> &points) override
+    {
+        _base_draw(points);
+    }
+
+    inline void _erase(const std::vector<Point2D> &points) override
+    {
+        _base_erase(points);
+    }
+
+    inline void _draw(const Object2D &object) override
+    {
+        _base_draw(object.get_bounds());
+    }
+
+    inline void _erase(const Object2D &object) override
+    {
+        _base_erase(object.get_bounds());
+    }
 
     inline void _draw(const Shape2D &shape) override
     {
-        auto points = shape.get_bounds(); auto color = shape.get_color();
+        auto points = shape.get_bounds();// auto color = shape.get_color();
         for (auto i : points) {
             int x = (i.get_x() - 1), y = (i.get_y() - 1), xr = x / _w_ratio, yr = y  / _h_ratio;
             // std::cout << "{" << (y % _h_ratio) << " " << (x % _w_ratio) << "} = " << pixel_map[y % _h_ratio][x % _w_ratio] << " ";
-            _buffer[yr * get_width() + xr] |= (color.get_color() | pixel_map[y % _h_ratio][x % _w_ratio]);
+            _buffer[yr * get_width() + xr] |= /*((color.get_color() << 8) |*/ pixel_map[y % _h_ratio][x % _w_ratio]; //);
         }
     }
 
@@ -40,11 +59,11 @@ private:
             while (!_buffer[i]) s += " ", ++i;
             std::cout << s;
             if (_buffer[i] == -1) break;
-            while (_buffer[i] && (c = _buffer[i] & 0x000000FF) > -1) {
+            while (_buffer[i] && (c = _buffer[i] & 0xFF) > -1) {
                 text_color(
-                    (_buffer[i] & 0xFF000000) >> rgba_r_shift,
-                    (_buffer[i] & 0x00FF0000) >> rgba_g_shift,
-                    (_buffer[i] & 0x0000FF00) >> rgba_b_shift);
+                    (_buffer[i] & rgba_r_mask) >> rgba_r_shift,
+                    (_buffer[i] & rgba_g_mask) >> rgba_g_shift,
+                    (_buffer[i] & rgba_b_mask) >> rgba_b_shift);
                 std::cout << braille_map[c];
                 ++i;
             }

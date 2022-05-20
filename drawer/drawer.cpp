@@ -44,7 +44,12 @@ void Drawer::draw(const Drawing3D &drawing) const
 */
 void Drawer::draw(const std::vector<Point2D>& points) const
 {
-    // _strategy->draw(points);
+    _strategy->draw(points);
+}
+
+void Drawer::draw(const Object2D &object) const
+{
+    _strategy->draw(object);
 }
 
 void Drawer::draw(const Shape2D& shape) const
@@ -54,7 +59,12 @@ void Drawer::draw(const Shape2D& shape) const
 
 void Drawer::erase(const std::vector<Point2D>& points) const
 {
-    // _strategy->erase(points);
+    _strategy->erase(points);
+}
+
+void Drawer::erase(const Object2D &object) const
+{
+    _strategy->erase(object);
 }
 
 void Drawer::erase(const Shape2D& shape) const
