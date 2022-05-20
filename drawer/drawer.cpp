@@ -62,6 +62,11 @@ void Drawer::erase(const std::vector<Point2D>& points) const
     _strategy->erase(points);
 }
 
+void Drawer::erase(const Object2D &object) const
+{
+    _strategy->erase(object);
+}
+
 void Drawer::erase(const Shape2D& shape) const
 {
     _strategy->erase(shape);

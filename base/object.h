@@ -3,7 +3,7 @@
 
 #include "../animation/animation.h"
 #include "../shapes/shapes.h"
-#include <map>
+#include <vector>
 
 namespace base {
 
@@ -16,6 +16,10 @@ public:
     virtual ~Object();
 
     void add_animation(const std::string &name, const Animation &anim);
+    const Animation &get_animation(const std::string &name) const;
+    const Animation &get_animation(int position) const;
+    bool is_animation_present(const std::string &name) const;
+    const std::vector<std::pair<std::string, Animation>> &get_animations(void) const;
     const std::string &get_name(void) const;
 
     void set_outer_color(const Color &color);
@@ -25,7 +29,7 @@ public:
 private:
     std::string _name;
     Color _outer_color, _inner_color;
-    std::map<std::string, Animation> _animations;
+    std::vector<std::pair<std::string, Animation>> _animations;
 
 };
 

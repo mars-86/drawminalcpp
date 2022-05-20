@@ -336,19 +336,22 @@
 
 1644722838 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\color\rgb.h
 
-1644722916 source:c:\users\spa_1\documents\programming\cpp\drawminal\animation\scene.cpp
+1653086288 source:c:\users\spa_1\documents\programming\cpp\drawminal\animation\scene.cpp
 	"scene.h"
+	<string>
+	<vector>
 
-1644722916 c:\users\spa_1\documents\programming\cpp\drawminal\animation\scene.h
+1653086301 c:\users\spa_1\documents\programming\cpp\drawminal\animation\scene.h
 	"../base/object2d.h"
+	"../drawer/drawer.h"
 
 1644722916 c:\users\spa_1\documents\programming\cpp\drawminal\base\object2d.h
 	"object.h"
 
-1644722916 c:\users\spa_1\documents\programming\cpp\drawminal\base\object.h
+1652482168 c:\users\spa_1\documents\programming\cpp\drawminal\base\object.h
 	"../animation/animation.h"
 	"../shapes/shapes.h"
-	<map>
+	<vector>
 
 1644722916 c:\users\spa_1\documents\programming\cpp\drawminal\animation\animation.h
 	<string>
@@ -418,7 +421,7 @@
 
 1645379069 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\color\rgb.h
 
-1644722916 source:c:\users\spa_1\documents\programming\cpp\drawminal\drawer\drawer.cpp
+1652062152 source:c:\users\spa_1\documents\programming\cpp\drawminal\drawer\drawer.cpp
 	"drawer.h"
 	"buffered_color_strategy.h"
 	"buffered_strategy.h"
@@ -426,7 +429,7 @@
 	"native_strategy.h"
 	"charmap.h"
 
-1644722916 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\drawer.h
+1652062392 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\drawer.h
 	<vector>
 	"draw_strategy.h"
 
@@ -510,13 +513,13 @@
 	"draw_strategy.h"
 	"charmap.h"
 
-1651962350 source:c:\users\spa_1\documents\programming\cpp\drawminal\main.cpp
+1653086328 source:c:\users\spa_1\documents\programming\cpp\drawminal\main.cpp
 	<iostream>
 	"drawminal.h"
-	"base/object2d.h"
+	"animation/scene.h"
 
-1644722872 c:\users\spa_1\documents\programming\cpp\drawminal\drawminal.h
-	"drawer/drawer.h"
+1652058182 c:\users\spa_1\documents\programming\cpp\drawminal\drawminal.h
+	"animation/scene.h"
 	"shapes/shapes.h"
 
 1645379069 source:c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\color\color.cpp
@@ -563,10 +566,11 @@
 1644722916 source:c:\users\spa_1\documents\programming\cpp\drawminal\animation\animation.cpp
 	"animation.h"
 
-1644722916 source:c:\users\spa_1\documents\programming\cpp\drawminal\base\object.cpp
+1652558497 source:c:\users\spa_1\documents\programming\cpp\drawminal\base\object.cpp
 	"object.h"
+	<algorithm>
 
-1644722916 source:c:\users\spa_1\documents\programming\cpp\drawminal\base\object2d.cpp
+1652586342 source:c:\users\spa_1\documents\programming\cpp\drawminal\base\object2d.cpp
 	"object2d.h"
 	<cmath>
 
