@@ -1,6 +1,5 @@
 #include <iostream>
 #include "drawminal.h"
-#include "animation/scene.h"
 // #include "base/object2d.h"
 // #include <unistd.h>
 

@@ -336,36 +336,36 @@
 
 1644722838 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\color\rgb.h
 
-1653086288 source:c:\users\spa_1\documents\programming\cpp\drawminal\animation\scene.cpp
+1653093719 source:c:\users\spa_1\documents\programming\cpp\drawminal\animation\scene.cpp
 	"scene.h"
 	<string>
 	<vector>
 
-1653086301 c:\users\spa_1\documents\programming\cpp\drawminal\animation\scene.h
+1653093719 c:\users\spa_1\documents\programming\cpp\drawminal\animation\scene.h
 	"../base/object2d.h"
 	"../drawer/drawer.h"
 
-1644722916 c:\users\spa_1\documents\programming\cpp\drawminal\base\object2d.h
+1653093719 c:\users\spa_1\documents\programming\cpp\drawminal\base\object2d.h
 	"object.h"
 
-1652482168 c:\users\spa_1\documents\programming\cpp\drawminal\base\object.h
+1653093719 c:\users\spa_1\documents\programming\cpp\drawminal\base\object.h
 	"../animation/animation.h"
 	"../shapes/shapes.h"
 	<vector>
 
-1644722916 c:\users\spa_1\documents\programming\cpp\drawminal\animation\animation.h
+1653093719 c:\users\spa_1\documents\programming\cpp\drawminal\animation\animation.h
 	<string>
 	<vector>
 	"../shapes/lib/coords/point2d.h"
 	"../shapes/lib/coords/point3d.h"
 
-1645379069 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\coords\point2d.h
+1653094586 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\coords\point2d.h
 	<ostream>
 
-1645379069 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\coords\point3d.h
+1653094586 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\coords\point3d.h
 	"point2d.h"
 
-1645379069 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\shapes.h
+1653094586 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\shapes.h
 	"lib/2d/circle.h"
 	"lib/2d/ellipse.h"
 	"lib/2d/line.h"
@@ -378,50 +378,50 @@
 	"lib/coords/point2d.h"
 	"lib/coords/point3d.h"
 
-1645379069 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\2d\circle.h
+1653094586 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\2d\circle.h
 	<cmath>
 	"../base/shape2d.h"
 
-1645379069 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\base\shape2d.h
+1653094586 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\base\shape2d.h
 	<iostream>
 	<vector>
 	"shape.h"
 	"../coords/point2d.h"
 
-1645379069 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\base\shape.h
+1653094586 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\base\shape.h
 
-1645379069 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\2d\ellipse.h
+1653094586 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\2d\ellipse.h
 	"../base/shape2d.h"
 
-1645379069 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\2d\line.h
+1653094586 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\2d\line.h
 	<cmath>
 	"../base/shape2d.h"
 
-1645379069 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\2d\parable.h
+1653094586 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\2d\parable.h
 	<cmath>
 	<iostream>
 	"../base/shape2d.h"
 	"../coords/point2d.h"
 
-1645379069 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\2d\rect.h
+1653094586 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\2d\rect.h
 	<vector>
 	"../base/shape2d.h"
 	"line.h"
 
-1645379069 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\2d\square.h
+1653094586 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\2d\square.h
 	"rect.h"
 
-1645379069 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\2d\freehand.h
+1653094586 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\2d\freehand.h
 	<vector>
 	"../base/shape2d.h"
 	"line.h"
 
-1645379069 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\color\color.h
+1653094701 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\color\color.h
 	"rgb.h"
 
-1645379069 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\color\rgb.h
+1653094586 c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\color\rgb.h
 
-1652062152 source:c:\users\spa_1\documents\programming\cpp\drawminal\drawer\drawer.cpp
+1653093719 source:c:\users\spa_1\documents\programming\cpp\drawminal\drawer\drawer.cpp
 	"drawer.h"
 	"buffered_color_strategy.h"
 	"buffered_strategy.h"
@@ -429,109 +429,109 @@
 	"native_strategy.h"
 	"charmap.h"
 
-1652062392 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\drawer.h
+1653093719 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\drawer.h
 	<vector>
 	"draw_strategy.h"
 
-1644722916 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\draw_strategy.h
+1653093719 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\draw_strategy.h
 	"drawer_base.h"
 	"../base/object2d.h"
 
-1644722872 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\drawer_base.h
+1653093719 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\drawer_base.h
 	<vector>
 	"drawing.h"
 	"../vterm/vterm.h"
 	"../shapes/shapes.h"
 
-1644722916 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\drawing.h
+1653093719 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\drawing.h
 	<vector>
 	"../shapes/lib/coords/point2d.h"
 	"../shapes/lib/coords/point3d.h"
 	"../shapes/lib/color/color.h"
 
-1651891689 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\vterm.h
+1653094197 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\vterm.h
 	"core/vterm.h"
 
-1651891689 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\core\vterm.h
+1653094197 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\core\vterm.h
 	<cmath>
 	<vector>
 	"../internal/command.h"
 	"../internal/vtopts.h"
 	"../os/os.h"
 
-1651891689 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\internal\command.h
+1653094197 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\internal\command.h
 	<iostream>
 	"sequences.h"
 	"colors.h"
 
-1651891689 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\internal\sequences.h
+1653094197 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\internal\sequences.h
 	<string>
 
-1651891689 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\internal\colors.h
+1653094197 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\internal\colors.h
 
-1651891689 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\internal\vtopts.h
+1653094197 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\internal\vtopts.h
 
-1651891690 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\os.h
+1653094271 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\os.h
 	"linux/x11.h"
 	"linux/linux.h"
 	"win32/win32.h"
 
-1651891690 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\linux\x11.h
+1653094271 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\linux\x11.h
 	<unistd.h>
 	"../base/platform.h"
 
-1651891690 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\base\platform.h
+1653094271 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\base\platform.h
 	"types.h"
 
-1651891690 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\base\types.h
+1653094271 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\base\types.h
 	<stdint.h>
 
-1651891690 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\linux\linux.h
+1653094271 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\linux\linux.h
 	<unistd.h>
 	<sys/ioctl.h>
 	"../base/platform.h"
 
-1651891690 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\win32\win32.h
+1653094271 c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\win32\win32.h
 	<windows.h>
 	"../base/platform.h"
 
-1644722916 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\buffered_color_strategy.h
+1653093719 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\buffered_color_strategy.h
 	"draw_strategy.h"
 	"charmap.h"
 
-1644722872 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\charmap.h
+1653093719 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\charmap.h
 
-1644722916 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\buffered_strategy.h
+1653093719 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\buffered_strategy.h
 	"draw_strategy.h"
 	"charmap.h"
 
-1644722916 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\native_color_strategy.h
+1653093719 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\native_color_strategy.h
 	"draw_strategy.h"
 	"charmap.h"
 
-1644722916 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\native_strategy.h
+1653093719 c:\users\spa_1\documents\programming\cpp\drawminal\drawer\native_strategy.h
 	"draw_strategy.h"
 	"charmap.h"
 
-1653086328 source:c:\users\spa_1\documents\programming\cpp\drawminal\main.cpp
+1653093719 source:c:\users\spa_1\documents\programming\cpp\drawminal\main.cpp
 	<iostream>
 	"drawminal.h"
 	"animation/scene.h"
 
-1652058182 c:\users\spa_1\documents\programming\cpp\drawminal\drawminal.h
+1653093719 c:\users\spa_1\documents\programming\cpp\drawminal\drawminal.h
 	"animation/scene.h"
 	"shapes/shapes.h"
 
-1645379069 source:c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\color\color.cpp
+1653094586 source:c:\users\spa_1\documents\programming\cpp\drawminal\shapes\lib\color\color.cpp
 	"color.h"
 
-1651891689 source:c:\users\spa_1\documents\programming\cpp\drawminal\vterm\core\vterm.cpp
+1653094197 source:c:\users\spa_1\documents\programming\cpp\drawminal\vterm\core\vterm.cpp
 	"vterm.h"
 
-1651891690 source:c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\linux\linux.cpp
+1653094271 source:c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\linux\linux.cpp
 	"linux.h"
 
-1651891690 source:c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\linux\x11.c
+1653094271 source:c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\linux\x11.c
 	"x11.h"
 	<stdio.h>
 	<linux/kd.h>
@@ -546,7 +546,7 @@
 	<sys/types.h>
 	<unistd.h>
 
-1651891690 source:c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\linux\x11.cpp
+1653094271 source:c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\linux\x11.cpp
 	"x11.h"
 	<stdio.h>
 	<linux/kd.h>
@@ -558,19 +558,19 @@
 	<sys/time.h>
 	<sys/types.h>
 
-1651891690 source:c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\win32\win32.cpp
+1653094271 source:c:\users\spa_1\documents\programming\cpp\drawminal\vterm\os\win32\win32.cpp
 	"win32.h"
 	<stdio.h>
 	<stdio.h>
 
-1644722916 source:c:\users\spa_1\documents\programming\cpp\drawminal\animation\animation.cpp
+1653093719 source:c:\users\spa_1\documents\programming\cpp\drawminal\animation\animation.cpp
 	"animation.h"
 
-1652558497 source:c:\users\spa_1\documents\programming\cpp\drawminal\base\object.cpp
+1653093719 source:c:\users\spa_1\documents\programming\cpp\drawminal\base\object.cpp
 	"object.h"
 	<algorithm>
 
-1652586342 source:c:\users\spa_1\documents\programming\cpp\drawminal\base\object2d.cpp
+1653093719 source:c:\users\spa_1\documents\programming\cpp\drawminal\base\object2d.cpp
 	"object2d.h"
 	<cmath>
 

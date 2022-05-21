@@ -47,3 +47,8 @@ bin/
 
 # Cmake
 build/
+
+# Submodules
+shapes/
+vterm/
+
